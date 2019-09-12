@@ -31,7 +31,8 @@
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="75dp"
-                android:background="@drawable/ic_app_logo" />
+                android:background="@drawable/ic_app_logo"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
@@ -47,7 +48,8 @@
                     android:text="architect your app with"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#465A61"
-                    app:fontFamily="cursive" />
+                    app:fontFamily="cursive"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
