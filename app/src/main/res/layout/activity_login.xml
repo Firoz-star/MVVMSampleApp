@@ -2,15 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <!--<data>
+
+    <data>
 
         <variable
             name="viewmodel"
-            type="net.simplifiedcoding.mvvmsampleapp.ui.auth.AuthViewModel"
-            />
-
-    </data>-->
-
+            type="com.atos.mvvmsampleapp.ui.auth.AuthViewModel" />
+    </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/root_layout"
@@ -73,6 +71,7 @@
                 android:padding="18dp">
 
                 <EditText
+                    android:text="@={viewmodel.email}"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
@@ -84,6 +83,7 @@
                     android:padding="12dp" />
 
                 <EditText
+                    android:text="@={viewmodel.password}"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
@@ -103,6 +103,7 @@
                     android:textColor="@color/colorPrimaryDark" />
 
                 <Button
+                    android:onClick="@{viewmodel::onLoginButtonClick}"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
