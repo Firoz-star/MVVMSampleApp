@@ -32,7 +32,7 @@
                 android:background="@drawable/ic_app_logo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                />
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
@@ -47,7 +47,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" app:fontFamily="cursive"
-                    android:textColor="#465A61"/>
+                    android:textColor="#465A61"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_gravity="center_horizontal"
@@ -56,7 +57,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                     app:fontFamily="casual" android:textStyle="bold" android:textAllCaps="false"
-                    android:typeface="monospace" android:textColor="#969EEE"/>
+                    android:typeface="monospace" android:textColor="#969EEE"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -78,7 +80,8 @@
                     android:layout_width="match_parent"
                     android:padding="12dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
 
                 <EditText
                     android:hint="firoz @gmail.com"
@@ -89,7 +92,8 @@
                     android:layout_width="match_parent"
                     android:padding="12dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
 
                 <EditText
                     android:inputType="textPassword"
@@ -100,7 +104,8 @@
                     android:layout_width="match_parent"
                     android:layout_marginBottom="12dp"
                     android:padding="12dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
 
                 <EditText
                     android:inputType="textPassword"
@@ -111,7 +116,8 @@
                     android:layout_width="match_parent"
                     android:layout_marginBottom="12dp"
                     android:padding="12dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
 
                 <TextView
                     android:textColor="@color/colorPrimaryDark"
@@ -119,14 +125,16 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:text="Forget Password?"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:layout_gravity="center_horizontal"
                     android:textAllCaps="false"
                     android:text="Sign Up"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -139,7 +147,8 @@
                 android:textAlignment="center"
                 android:text="Already have an account?\nSign in Here"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
