@@ -2,6 +2,7 @@ package com.atos.mvvmsampleapp.ui.auth
 
 import android.view.View
 import androidx.lifecycle.ViewModel
+import com.atos.mvvmsampleapp.data.repositories.UserRepository
 
 class AuthViewModel : ViewModel() {
 
@@ -16,6 +17,9 @@ class AuthViewModel : ViewModel() {
             authListener?.onFailure("Invalid email or password")
             return
         }
-        authListener?.onSuccess()
+
+        val loginResponse = UserRepository().userLogin(email!!, password!!)
+        authListener?.onSuccess(loginResponse)
+        //authListener?.onSuccess()
     }
 }
