@@ -1,8 +1,7 @@
 package com.atos.mvvmsampleapp.data.network
 
 import com.atos.mvvmsampleapp.data.network.responses.AuthResponses
-import okhttp3.ResponseBody
-import retrofit2.Call
+import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -20,8 +19,16 @@ interface MyApi {
     ): Response<AuthResponses>
 
     companion object {
-        operator fun invoke(): MyApi {
+        operator fun invoke(
+            networkConnectionInterceptor: NetworkConnectionInterceptor
+        ): MyApi {
+
+            val okkHttpClient = OkHttpClient.Builder()
+                .addInterceptor(networkConnectionInterceptor)
+                .build()
+
             return Retrofit.Builder()
+                .client(okkHttpClient)
                 .baseUrl("https://api.simplifiedcoding.in/course-apis/mvvm/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

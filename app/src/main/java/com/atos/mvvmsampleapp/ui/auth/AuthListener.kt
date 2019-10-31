@@ -1,6 +1,5 @@
 package com.atos.mvvmsampleapp.ui.auth
 
-import androidx.lifecycle.LiveData
 import com.atos.mvvmsampleapp.data.db.entities.User
 
 

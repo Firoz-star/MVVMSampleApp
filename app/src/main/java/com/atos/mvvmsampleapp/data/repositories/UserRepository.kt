@@ -5,7 +5,6 @@ import com.atos.mvvmsampleapp.data.db.entities.User
 import com.atos.mvvmsampleapp.data.network.MyApi
 import com.atos.mvvmsampleapp.data.network.SafeApiRequest
 import com.atos.mvvmsampleapp.data.network.responses.AuthResponses
-import retrofit2.Response
 
 class UserRepository(
     private val api: MyApi,
