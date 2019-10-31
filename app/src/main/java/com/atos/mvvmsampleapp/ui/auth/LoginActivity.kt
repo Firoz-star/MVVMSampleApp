@@ -21,7 +21,6 @@ import org.kodein.di.generic.instance
 class LoginActivity : AppCompatActivity(), AuthListener, KodeinAware {
 
     override val kodein by kodein()
-
     private val factory : AuthViewModelFactory by instance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
