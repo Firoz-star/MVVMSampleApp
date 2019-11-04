@@ -4,9 +4,12 @@ import android.app.Application
 import com.atos.mvvmsampleapp.data.db.AppDatabase
 import com.atos.mvvmsampleapp.data.network.MyApi
 import com.atos.mvvmsampleapp.data.network.NetworkConnectionInterceptor
+import com.atos.mvvmsampleapp.data.preferences.PreferencesProvider
+import com.atos.mvvmsampleapp.data.repositories.QuotesRepository
 import com.atos.mvvmsampleapp.data.repositories.UserRepository
 import com.atos.mvvmsampleapp.ui.auth.AuthViewModelFactory
 import com.atos.mvvmsampleapp.ui.auth.home.profile.ProfileViewModelFactory
+import com.atos.mvvmsampleapp.ui.auth.home.quotes.QuotesViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -24,8 +27,11 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { PreferencesProvider(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
+        bind() from singleton { QuotesRepository(instance(), instance(),instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { ProfileViewModelFactory(instance()) }
+        bind() from provider { QuotesViewModelFactory(instance()) }
     }
 }

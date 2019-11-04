@@ -3,12 +3,12 @@
 
     <item
         android:title="Home"
-        android:id="@+id/fragmentHome"
+        android:id="@+id/profileFragment"
         />
 
     <item
-        android:title="User"
-        android:id="@+id/fragmentUser"
+        android:title="Quotes"
+        android:id="@+id/quotesFragment"
         />
 
 </menu>
