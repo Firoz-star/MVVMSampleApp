@@ -1,0 +1,4 @@
+<FindBugsFilter>
+    <Bug pattern="SF_SWITCH_NO_DEFAULT" />
+    <Bug pattern="SF_SWITCH_FALLTHROUGH" />
+</FindBugsFilter>

@@ -47,13 +47,11 @@ class LoginActivity : AppCompatActivity(), AuthListener, KodeinAware {
     }
 
     override fun onStarted() {
-        //toast("Login Started...")
         progress_bar.show()
     }
 
     override fun onSuccess(user: User) {
         progress_bar.hide()
-        //root_layout.snackbar("${user.name} is logged in")
     }
 
     override fun onFailure(message: String) {
